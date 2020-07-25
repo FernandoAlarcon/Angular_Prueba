@@ -1,0 +1,22 @@
+<h1 class="data-body" >
+    {{title}}
+</h1>
+
+<ul>
+    <li *ngFor="let user of users" >
+       
+        <app-user nameUser={{user}}  ></app-user>
+        <app-user [nameUser]="user"  ></app-user>
+        <br>
+
+       
+       
+    </li>
+    perra
+    <app-user *ngFor="let user of users" [nameUser]="user"  ></app-user>
+
+</ul>
+
+<p *ngIf="activated" >
+    Activado
+</p> 

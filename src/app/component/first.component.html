@@ -1,22 +1,35 @@
-<h1 class="data-body" >
-    {{title}}
-</h1>
+<div *ngIf="activated" >
+    <h1 class="data-body" >
+        {{title}}
+    </h1>
 
-<ul>
-    <li *ngFor="let user of users" >
-       
-        <app-user nameUser={{user}}  ></app-user>
-        <app-user [nameUser]="user"  ></app-user>
-        <br>
+    <ul>
+        <li *ngFor="let user of users" >
+        
+            <app-user nameUser={{user}}  ></app-user>
+            <app-user [nameUser]="user"  ></app-user>
+            <br>
 
-       
-       
-    </li>
-    perra
-    <app-user *ngFor="let user of users" [nameUser]="user"  ></app-user>
+        
+        
+        </li>
+        perra
+        <app-user *ngFor="let user of users" [nameUser]="user"  ></app-user>
 
-</ul>
+    </ul>
 
-<p *ngIf="activated" >
-    Activado
-</p> 
+    <p *ngIf="activated" >
+        Activado
+    </p> 
+</div>
+
+<div>
+    <p> Name: {{name}} </p> 
+    <p> Street: {{adress.street}} </p>
+    <p> City: {{adress.city}} </p>
+    <ul>
+        <li *ngFor="let hobby of hobbies" >
+            {{hobby}}
+        </li>
+    </ul>
+</div>
